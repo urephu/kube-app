@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vprofiledb
+  name: vprodb
   labels:
-    app: vprofiledb
+    app: vprodb
 spec:
   selector:
     matchLabels:
-      app: vprofiledb
+      app: vprodb
   replicas: 1
   template:
     metadata:
       labels:
-        app: vprofiledb
+        app: vprodb
     spec:
       containers:
-        - name: vprofiledb
+        - name: vprodb
           image: isrealurephu/vprofiledb:V1
           args:
             - "ignore-db-dir=lost+found"
